@@ -1,66 +1,66 @@
 package com.epam.entities;
 
-import java.sql.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
+import com.epam.Main.SQLMain;
+import com.epam.service.Queries;
+
 import java.util.List;
 
 public class OrderEntity {
     private int orderId;
-    private String items;
     private String orderDate;
+    private List<String> items;
+    Double totalOrderPrice;
 
     public int getOrderId() {
         return orderId;
     }
 
-    public void setOrderId(int orderId) {
-        this.orderId = orderId;
-    }
-
-    public String getItems() {
+    public List<String> getItems() {
         return items;
-    }
-
-    public void setItems(String items) {
-        this.items = items;
     }
 
     public String getOrderDate() {
         return orderDate;
     }
 
-    public void setOrderDate(String orderDate) {
-        this.orderDate = orderDate;
+    public OrderEntity() {
     }
 
-    public OrderEntity(){}
 
-    public OrderEntity(int orderId, String items, String orderDate) {
+
+    public OrderEntity(int orderId, List<String> items, String orderDate) {
         this.orderId = orderId;
         this.items = items;
         this.orderDate = orderDate;
     }
 
-    public Integer getAmountOfItemsInOrder() {
-        Integer amountOfItemsInOrder=0;
-        for (int i = 0; i < items.split("/").length; i++) {
-            amountOfItemsInOrder = i+1;
+    public Integer getAmountOfUniqueItems() {
+        Integer amountOfUniqueItems = 0;
+        for (int i = 0; i < items.size(); i++) {
+            amountOfUniqueItems = i + 1;
         }
-        return amountOfItemsInOrder;
+        return amountOfUniqueItems;
     }
 
-    public List<String> getItemsInOrderAsList() {
-        List<String> itemsInOrderAsList  = Arrays.asList(items.split("/"));
-        return itemsInOrderAsList;
+    public Double getTotalPriceOfOrder() {
+        totalOrderPrice = 0.0;
+        for (String item : items) {
+            for (ItemEntity itemFromBase : Queries.getItemsBase()) {
+                if (item.contentEquals(itemFromBase.getItemName())) {
+                    totalOrderPrice = totalOrderPrice + itemFromBase.getItemPrice();
+                }
+            }
+        }
+        return totalOrderPrice;
     }
 
     @Override
     public String toString() {
         return "Order Information: " +
                 "orderId=" + orderId +
-                ", items='" + getItemsInOrderAsList() + '\'' +
+                ", items='" + items.toString() + '\'' +
                 ", orderDate='" + orderDate + '\'' +
+                ", total Price='" + getTotalPriceOfOrder() + '\'' +
                 ' ';
     }
 }

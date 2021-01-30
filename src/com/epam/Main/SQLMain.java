@@ -1,10 +1,10 @@
 package com.epam.Main;
 
-import com.epam.service.QueryInstance;
+import com.epam.service.Queries;
 import com.epam.utility.ConnectionInstance;
 import com.epam.utility.PropertiesFile;
 
-import java.sql.PreparedStatement;
+import java.util.Properties;
 
 public class SQLMain {
 
@@ -17,14 +17,23 @@ public class SQLMain {
     public static final String USE_UNICODE = "true";
 
     public static void main(String[] args) {
-        PreparedStatement statement;
         PropertiesFile properties = new PropertiesFile();
         ConnectionInstance connection = new ConnectionInstance();
-        QueryInstance queryInstance = new QueryInstance();
+        Queries queryInstance = new Queries();
+        final Properties propertiesFile = properties.PropertiesFile(USER, PASSWORD, AUTO_RECONNECT, CHARACTER_ENCODING, USE_UNICODE);
+
         try {
             Class.forName(JDBC_DRIVER);
-            queryInstance.getOrderInformation(connection
-                    .ConnectionCreator(URL, properties.PropertiesFile(USER, PASSWORD, AUTO_RECONNECT, CHARACTER_ENCODING, USE_UNICODE)), 1);
+            queryInstance.setConnection(connection.ConnectionCreator(URL, propertiesFile));
+            //1
+            queryInstance.getOrderInformation(444);
+            System.out.println("Query 1 completed");
+            //2
+            queryInstance.getOrderPriceLimitedAndConsistingCertainUniqueItems(queryInstance,503.0, 3);
+            System.out.println("Query 2 completed");
+            //3
+            queryInstance.getOrdersNumbersConsistCertainItem("PANASONIC123");
+            System.out.println("Query 3 completed");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
