@@ -1,11 +1,18 @@
 package com.epam.entities;
 
-import com.epam.Main.SQLMain;
-
-public class ItemEntity {
+public class ItemTable {
     private String itemName;
     private String itemDescription;
     private Double itemPrice;
+
+    public ItemTable() {
+    }
+
+    public ItemTable(String itemName, String itemDescription, Double itemPrice) {
+        this.itemName = itemName;
+        this.itemDescription = itemDescription;
+        this.itemPrice = itemPrice;
+    }
 
     public String getItemName() {
         return itemName;
@@ -17,14 +24,6 @@ public class ItemEntity {
 
     public Double getItemPrice() {
         return itemPrice;
-    }
-
-    public  ItemEntity(){}
-
-    public ItemEntity(String itemName, String itemDescription, Double itemPrice) {
-        this.itemName = itemName;
-        this.itemDescription = itemDescription;
-        this.itemPrice = itemPrice;
     }
 
     @Override

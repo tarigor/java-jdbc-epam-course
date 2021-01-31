@@ -1,0 +1,23 @@
+
+v
+java:S1450
+"YRemove the "properties" field and declare it as a local variable in the relevant methods.(õ÷Şà8µ‰´©ô.
+S
+java:S1068"1Remove this unused "autoReconnect" private field.(°ªƒıÿÿÿÿ8¿Éí¨ô.
+‚
+java:S1450"`Remove the "characterEncoding" field and declare it as a local variable in the relevant methods.(”¢×åúÿÿÿÿ8¿Éí¨ô.
+n
+java:S1223"LRename this method to prevent any misunderstanding or make it a constructor.(—›¹ªøÿÿÿÿ8•ÌŞ¨ô.
+~
+java:S1450"\Remove the "autoReconnect" field and declare it as a local variable in the relevant methods.(°ªƒıÿÿÿÿ8¿Éí¨ô.
+o	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—›¹ªøÿÿÿÿ8•ÌŞ¨ô.
+W
+java:S1068"5Remove this unused "characterEncoding" private field.(”¢×åúÿÿÿÿ8¿Éí¨ô.
+N
+java:S1068",Remove this unused "password" private field.(œãë­úÿÿÿÿ8¿Éí¨ô.
+P
+java:S1068	".Remove this unused "useUnicode" private field.(„Ûäşÿÿÿÿ8¿Éí¨ô.
+y
+java:S1450"WRemove the "password" field and declare it as a local variable in the relevant methods.(œãë­úÿÿÿÿ8¿Éí¨ô.
+{
+java:S1450	"YRemove the "useUnicode" field and declare it as a local variable in the relevant methods.(„Ûäşÿÿÿÿ8¿Éí¨ô.

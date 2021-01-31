@@ -1,0 +1,31 @@
+
+:
+java:S1643·"Use a StringBuilder instead.(Ú—™±8öêºÍõ.
+€
+java:S1104"^Make dataFromOrderTable a static final constant or non-public and provide accessors if needed.(›„‰×ùÿÿÿÿ8ò«Áõ.
+¤
+java:S1186Ê"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(äûúøıÿÿÿÿ8öêºÍõ.
+[	java:S106ä"9Replace this use of System.out or System.err by a logger.(áˆ”şÿÿÿÿ8Í°£Íõ.
+z
+java:S1450"XRemove the "statement" field and declare it as a local variable in the relevant methods.(„£„÷øÿÿÿÿ8ÎˆŒÍõ.
+Q
+java:S1172Ğ".Remove this unused method parameter "queries".(˜ÏÑ¶üÿÿÿÿ8Í°£Íõ.
+^	java:S125"<This block of commented-out lines of code should be removed.(¯³Õúÿÿÿÿ8Í°£Íõ.
+V
+java:S1481Ô"3Remove this unused "orderItemTable" local variable.(Æªş¸üÿÿÿÿ8Í°£Íõ.
+Y	java:S125Ÿ"<This block of commented-out lines of code should be removed.(Íè¶ò8Í°£Íõ.
+a
+java:S1155´">Use isEmpty() to check whether the collection is empty or not.(úĞÏ¿úÿÿÿÿ8öêºÍõ.
+~
+java:S1104"bMake dataFromOrderItemTable a static final constant or non-public and provide accessors if needed.(¦âöc8ò«Áõ.
+?
+java:S1643µ"Use a StringBuilder instead.(‚ùâøÿÿÿÿ8öêºÍõ.
+X
+java:S1172Ê"5Remove this unused method parameter "orderItemLists".(äûúøıÿÿÿÿ8öêºÍõ.
+Y	java:S125–"<This block of commented-out lines of code should be removed.(˜Öæñ8Í°£Íõ.
+‚
+java:S1450"`Remove the "totalPriceOfOrder" field and declare it as a local variable in the relevant methods.(ü²Äƒøÿÿÿÿ8ÆÛÌÉõ.
+3
+java:S1700"Rename field "queries"(²á×ö8¶œ°Íõ.
+V	java:S106Ü"9Replace this use of System.out or System.err by a logger.(ĞõÕ8Í°£Íõ.
+[	java:S106÷"9Replace this use of System.out or System.err by a logger.(ı–ÁŸùÿÿÿÿ8Í°£Íõ.
